@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>You are an idiot</title>
+     <link rel="icon" href="Idiotwhite.ico" type="image/x-icon">
+        <script>
+document.addEventListener('contextmenu', function(e){
+
+e.preventDefault();
+
+});
+</script>
+    </head>
+<body style="text-align:center;">
+ 
+    
+ 
+ 
+ 
+    <button onclick="NewTab()" style="font-size:1000;">
+        <img src="idiot.gif" width="1000" height="800">
+    </button>
+ 
+    <script>
+        
+        function NewTab() {
+            var sound = new Audio("idiot.mp3");
+            sound.play()
+            // Here are the initial values for our animation. 
+            window.open("lol.html",
+                    "", "width=400, height=300");
+            
+            
+            
+            sound.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+                
+}, false);
+            
+        }
+    </script>
+
+ 
+</body></html>

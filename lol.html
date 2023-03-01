@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>You are an idiot!</title>
+    <script>
+document.addEventListener('contextmenu', function(e){
+
+e.preventDefault();
+
+});
+</script>
+    <script>
+        async function animateWindow() {
+    const transitions = {
+        opacity: {
+            opacity: 0.7,
+            duration: 500
+        },
+        position: {
+            top: 100,
+            left: 100,
+            duration: 500,
+            relative: true
+        }
+    };
+    const options = {
+        interrupt: true,
+        tween: 'ease-in'
+    };
+
+    const win = await fin.Window.getCurrent();
+    return win.animate(transitions, options);
+}
+
+animateWindow()
+    .then(() => console.log('Animation done'))
+    .catch(err => console.error(err));
+    </script>
+    <script>
+        function Play() {
+            var sound = new Audio("idiot.mp3");
+            sound.play()
+            // Here are the initial values for our animation. 
+            window.open("lol.html",
+                    "", "width=400, height=300");
+            
+            
+            
+            sound.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+                
+}, false);
+            
+        }
+    </script>
+</head>
+<body onload="Play();">
+<img src="idiot.gif" width="400" height="300">
+    
+</body>
+</html>
